@@ -1,9 +1,7 @@
 <?php
 error_reporting(0);
-$name=$_POST['name'];
-$email=$_POST['email'];
-$subject=$_POST['subject'];
-$message=$_POST['message'];
+$rating=$_POST['rating'];
+$comment=$_POST['comment'];
 
 
 $servername = "localhost";
@@ -18,8 +16,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO user_feedback (Name,Email,SUBJECT,MESSAGE)
-VALUES ('$name','$email','$subject','$message')";
+$sql = "INSERT INTO finalized (rating,comment)
+VALUES ('$rating','$comment')";
 
 if ($conn->query($sql) === TRUE) {
     echo "$name";

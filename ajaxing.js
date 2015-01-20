@@ -10,9 +10,8 @@ if(xhr.readyState==4 && xhr.status==200)
 {
 console.log("status changed");
 var x=document.getElementById("result");
-console.log(xhr.responseText);
 var result = xhr.responseText;
-x.innerHTML="thankyou "+result+", feedback succesfuly submitted!!";
+x.innerHTML="thankyou, feedback succesfuly submitted!!";
 }
 
 }
@@ -31,11 +30,11 @@ var result=mymessage();
 var xhr= new XMLHttpRequest();
 if (xhr)
 {
+var red = $( "#slider" ).slider( "value" );
 xhr.open("POST","submit.php",true);
 xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 xhr.onreadystatechange=function(){ handleResponse(xhr);};
-params="name="+result[0]+"&email="+result[1]+"&subject="+result[2]+"&message="+result[3];
-console.log(params);
+params="rating="+red+"&comment="+result[1];
 xhr.send(params);
 
 }
