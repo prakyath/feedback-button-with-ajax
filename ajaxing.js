@@ -18,11 +18,8 @@ x.innerHTML="thankyou, feedback succesfuly submitted!!";
 
 function mymessage()
 {
-for(i=0;i<len;i++)
-{
-feedback[i]=x2[i].value;
-}
-console.log(feedback);
+
+feedback[1]=x2[1].value;
 return feedback;
 }
 function sendRequest(){
@@ -36,7 +33,6 @@ xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 xhr.onreadystatechange=function(){ handleResponse(xhr);};
 params="rating="+red+"&comment="+result[1];
 xhr.send(params);
-
 }
 }
 
