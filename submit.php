@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+
 $rating=$_POST['rating'];
 $comment=$_POST['comment'];
 
@@ -20,7 +20,7 @@ $sql = "INSERT INTO finalized (rating,comment)
 VALUES ('$rating','$comment')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "$name";
+    echo "cool";
 } else {
     echo "Error: please try again!!  ";
 }
