@@ -1,4 +1,4 @@
-var x = document.getElementById("button1");
+var x = document.getElementById("content");
 var x2 = document.getElementsByName("feedbackfield");
 var len = document.getElementsByName("feedbackfield").length;
 var feedback=[];
@@ -38,7 +38,10 @@ if(xhr.readyState==4 && xhr.status==200)
 {
 console.log("status changed");
 var x=document.getElementById("result");
-x.innerHTML= "thankyou, feedback succesfuly submitted!!" ;
+var x2=document.getElementById('buttonvalue')
+x.innerHTML= "thankyou!!" ;
+x2.innerHTML="Send Again";
+
 }
 }
 
